@@ -49,7 +49,7 @@ body {
 		height: 14px;
 		width: 120px;
 		margin-top: 20px;
-		margin-left: auto; /* Décale la barre vers la droite */
+		margin-left: auto;
 		margin-right: 0;
 	}
 
@@ -91,7 +91,7 @@ body {
 		height: 14px;
 		width: 120px;
 		margin-top: 20px;
-		margin-left: auto; /* Décale la barre vers la droite */
+		margin-left: auto;
 		margin-right: 0;
 	}
 }
@@ -152,7 +152,57 @@ body {
 		height: 14px;
 		width: 120px;
 		margin-top: 20px;
-		margin-left: auto; /* Décale la barre vers la droite */
+		margin-left: auto;
 		margin-right: 0;
+	}
+}
+
+@media (max-width: 1024px) {
+	.first {
+		&::after {
+			top: calc(40% - 75px);
+			left: calc(52% - 75px);
+			width: 150px;
+			height: 150px;
+		}
+	}
+
+	.third {
+		&::after {
+			top: calc(42% - 75px);
+			left: calc(50% - 75px);
+			width: 150px;
+			height: 150px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.first {
+		&::after {
+			content: "";
+			top: calc(47% - 50px);
+			left: calc(52% - 50px);
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	.third {
+		&::after {
+			content: "";
+			top: calc(52% - 50px);
+			left: calc(47% - 50px);
+			width: 100px;
+			height: 100px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.first::after,
+	.third::after {
+		content: "";
+		display: none;
 	}
 }
